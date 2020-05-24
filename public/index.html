@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <!-- script for p5 js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js" integrity="sha256-w7+V9/jcjUhs0pVV3uaphYQbXkTJZkd/3CfsinPRzvM=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        div, #geolocate{
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        .info{
+            text-align: center;
+            padding: 10px;
+            background-color: grey;
+        }
+        .button{
+            text-align: center;
+        }
+        #video{
+            border: 2px solid black;
+            margin-top: 20px;
+        }
+        #geolocate{
+            background-color: teal;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        #geolocate:hover{
+            background-color: orange;
+            color: teal;
+        }
+        #map{
+            padding: 100px;
+            height: 300px;
+        }
+        .results{
+            text-align: center;
+            background-color: teal;
+            padding: 10px;
+        }
+        .results:hover{
+            background-color: orange;
+            color: teal;
+        }
+        .results a{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname">
+        <div id="video"></div>
+        <p>
+            latitude: <span id='lat'></span>&deg;<br>
+            longitude: <span id='lon'></span>&deg;
+        </p>
+        <div class="button">
+            <button id="geolocate">Geolocate</button>
+        </div>
+    </div>
+
+    <div class="results"><a href="./results.html">Database Results</a></div>
+
+    <div id="map"></div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
